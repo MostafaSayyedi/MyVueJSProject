@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Passing Your Own Arguments with Events</title>
+    <script src="../js/vue.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <button v-on:click="increase(2, $event)">Click me :-|</button>
+        <p>Count is: {{count}}</p>
+        <p v-on:mousemove="mousepointer">Coordinate is: {{x}} / {{y}}</p>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                x: 0,
+                y: 0,
+                count: 0
+            },
+            methods: {
+                increase: function (step, event) {
+                    this.count += step;
+                },
+                mousepointer: function (event) {
+                    this.x = event.clientX;
+                    this.y = event.clientY;
+                }
+            }
+
+        });
+    </script>
+</body>
+
+</html>

@@ -3,28 +3,63 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Hello</title>
-    <script src="js/vue.min.js"> </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game Challenge!</title>
+    <script src="js/vue.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/foundation.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/app.css"> -->
+     <link rel="stylesheet" type="text/css" href="css/app1.css"> 
+    <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
+    
 </head>
 
 <body>
+    <div id="app">
+        <section class="row">
+            <div class="small-6 columns">
+                <h1 class="text-center">You</h1>
+                <div class="healthbar">
+                    <div class="healthbar text-center" style="background-color: green;margin: 0; color: white;">
 
-    <script>
-        new Vue({
-            el: '#app',
-            data: ({
-                link: 'www.google.com',
-                title: 'Hello LoLo!!!'
-            }),
+                    </div>
+                </div>
+            </div>
 
+            <div class="small-6 columns">
+                <h1 class="text-center">Monster</h1>
+                <div class="healthbar">
+                    <div class="healthbar text-center" style="background-color: green;margin: 0; color: white;">
 
-            methods: {
-                sayhello: function () {
-                    return this.title;
-                }
-            }
-        })
-    </script>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="row controls">
+            <div class="small-12 columns">
+                <button id="start-game">Start a new Game</button>
+            </div>
+        </section>
+        <section class="row controls">
+            <div class="small-12 columns">
+                <button id="attack">Attack</button>
+                <button id="special-attack">Special Attack</button>
+                <button id="heal">Heal</button>
+                <button id="give-up">Give Up</button>
+            </div>
+        </section>
+        <section class="row log">
+            <div class="small-12 columns">
+                <ul>
+                    <li>
+
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+   <script href="js/app.js"></script>
 </body>
 
 </html>

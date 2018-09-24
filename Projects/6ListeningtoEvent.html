@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Listening to Event with Vue JS!</title>
+    <script src="../js/vue.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p>Count is: {{count}}</p>
+        <button v-on:click="increase">+1</button>
+        <button v-on:click="reset">Reset</button>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                count: 0,
+            },
+            methods: {
+                increase: function (event) {
+                    this.count++;
+                },
+                reset: function (event) {
+                    this.count = 0;
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
