@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Saving Time With Shorthand</title>
+    <script src="../js/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <button @click="changeLink">
+        Click to Change
+    </button>
+    <a :href="link">Apple or Goole?</a>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            link: 'https//google.com'
+        },
+        methods:
+            {
+                changeLink: function () {
+                    this.link = 'http://apple.com'
+                }
+            }
+    })
+</script>
+</body>
+</html>

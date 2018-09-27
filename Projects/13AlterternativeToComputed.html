@@ -32,10 +32,18 @@
                 return this.count > 5 ? 'Greater 5' : 'Smaller than 5';
             }
         },
+        watch: {
+            count: function (value) {
+                var vm = this;
+                setTimeout(function () {
+                    vm.count = 0;
+                },2000);
+            }
+        },
         methods: {
-            result: function () {
+            result: function() {
                 console.log('Method');
-                return this.count > 5 ? 'Greater 5' : 'Smaller than 5';
+                return this.counter > 5 ? 'Greater 5' : 'Smaller than 5';
             }
         }
     });
